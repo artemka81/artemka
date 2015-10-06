@@ -10,7 +10,7 @@
 </head>
 <body>
 	<header id="main_navigation" class="clearfix">
-		<a href="#" class="name">Artem Kikhtenko</a>
+		<%= link_to "Artem Kikhtenko", root_path, class: "name" %>
 		<nav>
 			<ul>
 				<li><%= link_to "Articles", posts_path %></li>
@@ -20,6 +20,15 @@
 		</nav>
 	</header>
 	<%= yield %>
+
+	<footer id="main_footer">
+		<p class="copyright">&copy Kikhtenko Artem</p>
+		<nav>
+			<a href="http://vk.com/artem.kikhtenko" target="_blank"><i class="fa fa-vk"></i></i></a>
+			<a href="https://facebook.com/artem.kikhtenko" target="_blank"><i class="fa fa-facebook-square"></i></a>
+			<a href="https://github.com/artemka81" target="_blank"><i class="fa fa-github"></i></a>
+		</nav>
+	</footer>
 
 </body>
 </html>

@@ -1,7 +1,27 @@
-<%= @post.title %><br/>
-<%= @post.content %>
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+	<header>
+		<p class="date"><%= @post.created_at.strftime("%A, %b %d")%></p>
+		<h1><%= @post.title %></h1>
+		<hr>
+	</header>
+	<div id="content">
+		<%= @post.content %>
+	</div>
+	<hr>
+	<div id="share_box">
+		<p>Share Алфавит составитель всемогущая</p>
+		<a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path:false}])%>','_blank', 'width=800, height=500, top=200, left=300'); void(0);"><i class="fa fa-google-plus"></i></a>
+		
+		<a onclick="javascript:window.open('http://facebook.com/sharer.php?u=<%= url_for([@post, {only_path:false}])%>','_blank', 'width=800, height=500, top=200, left=300'); void(0);"><i class="fa fa-facebook-square"></i></a>
 
-<br>
-<br>
+		<a onclick="javascript:window.open('http://vk.com/share.php?url=<%= url_for([@post, {only_path:false}])%>','_blank', 	'width=800, height=500, top=200, left=300'); void(0);"><i class="fa fa-vk"></i></a>
+		
+		
+	</div>
+	<hr>
+</div>
+
+<!-- 
+
 <%= link_to "Edit", edit_post_path(@post) %>
-<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm:"Вы уверенны?"} %>
+<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm:"Вы уверенны?"} %> -->
