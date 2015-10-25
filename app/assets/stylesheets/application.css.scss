@@ -162,6 +162,7 @@ textarea{
 	min-height:15em;
 }
 input[type="submit"], .button{
+	display: inline-block;
 	outline:none;
 	background: transparent;
 	border: 2px solid $border;	
@@ -170,6 +171,7 @@ input[type="submit"], .button{
 	color:$dark;
 	text-decoration:none;
 	padding:1em 2em;
+	margin: 10px 10px 40px 10px;
 	&:hover{
 		border:2px solid  $hightlight;
 		color: $hightlight; 

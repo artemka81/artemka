@@ -22,6 +22,6 @@
 </div>
 
 
-<%= link_to "Edit", edit_post_path(@post) %>
-<!-- 
-<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm:"Вы уверенны?"} %> -->
+<%= link_to "Edit", edit_post_path(@post),  {:class=>"button" } %>
+
+<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm:"Вы уверенны?"} %> 
